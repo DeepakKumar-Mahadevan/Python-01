@@ -1,4 +1,8 @@
 import pandas as pd
+
+pd.set_option('display.width', 1000)
+pd.set_option('colheader_justify', 'center')
+
 # df = pd.read_csv(r'E:\Chicago_E_Drive\Deepak DOCs\Study\Data Analytics\Sample_Data\ManUtdPlayers.csv',encoding='latin-1')
 df = pd.read_excel(r'E:\Chicago_E_Drive\Deepak DOCs\Study\Data Analytics\Sample_Data\ManUtdPlayers.xlsx')
 # print(df)
@@ -15,11 +19,12 @@ html = f'''
         <head>
             <title>{page_title_text}</title>
         </head>
+        <link rel="stylesheet" type="text/css" href="df_style.css"/>
         <body>
             <h1>{title_text}</h1>
             <p>{text}</p>
             <h2>{List_Header}</h2>
-            {df.to_html()}
+            {df.to_html(classes='mystyle')}
         </body>
     </html>
     '''
