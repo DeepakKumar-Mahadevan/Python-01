@@ -17,6 +17,6 @@
 }
 
 .mystyle tr:hover {
-    background: silver;
+    background: yellow;
     cursor: pointer;
 }

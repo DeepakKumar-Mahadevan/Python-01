@@ -24,7 +24,8 @@ html = f'''
             <h1>{title_text}</h1>
             <p>{text}</p>
             <h2>{List_Header}</h2>
-            {df.to_html(classes='mystyle')}
+            {df.to_html(table_id = "ManUtdPlayers", classes='mystyle')}
+            <script src="df_script.js"></script>
         </body>
     </html>
     '''
